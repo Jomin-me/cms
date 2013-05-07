@@ -1,0 +1,4 @@
+<ul class="nav nav-list">
+  <li class="<%= request.path == '/components/new'? 'active':'' %>"><%= link_to "元件入库", {:controller => 'components', :action => 'new'} %></li>
+  <li class="<%= request.path == '/components'? 'active':''%>"><%= link_to "元件库存", {:controller => 'components', :action => 'index'} %></li>
+</ul>

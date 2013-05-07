@@ -1,0 +1,36 @@
+<% content_for(:nav) { %>
+    <%= render :partial => 'layouts/cside' %>
+<% } %>
+<% content_for(:page_header) { %>
+    <h4>元件库存</h4>
+<% } %>
+
+<%- model_class = Component -%>
+<table class="table table-striped table-condensed table-bordered">
+  <thead>
+  <tr>
+    <th>元件名</th>
+    <th>规格</th>
+    <th>封装</th>
+    <th>库存</th>
+    <th>价格</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @components.each do |component| %>
+      <tr>
+        <td><%= component.element.name %></td>
+        <td><%= component.specification.name %></td>
+        <td><%= component.package.name %></td>
+        <td><%= component.stock %></td>
+        <td><%= component.price %></td>
+        <td>
+          <%= link_to '查看', component, :class => 'btn btn-mini' %>
+          <%= link_to '编辑', edit_component_path(component), :class => 'btn btn-mini' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= will_paginate @components %>

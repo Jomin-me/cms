@@ -1,0 +1,57 @@
+<% content_for(:nav) { %>
+    <%= render :partial => 'layouts/cside' %>
+<% } %>
+<% content_for(:page_header) { %>
+    <h5>元件编辑</h5>
+<% } %>
+
+<%= form_for @component, :html => {:class => 'form-horizontal'} do |f| %>
+    <div class="control-group">
+      <label class="control-label">元件名</label>
+      <div class="controls" style="padding-top: 5px;">
+        <%= @component.element.name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">规格</label>
+      <div class="controls" style="padding-top: 5px;">
+        <%= @component.specification.name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">封装</label>
+      <div class="controls" style="padding-top: 5px;">
+        <%= @component.package.name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :supplier, '供应商', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :supplier %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :stock, '库存', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :stock, :class => 'number_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :price, '单价', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :price, :class => 'number_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :info, '其他信息', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :info, rows:'5' %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.submit '提交',class:'btn btn-primary' %>
+    </div>
+
+
+<% end %>
+

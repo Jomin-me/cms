@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  element_id: 1
+  specification_id: 1
+  package_id: 1
+  supplier: MyString
+  stock: 1
+  price: 9.99
+  info: MyText
+
+two:
+  element_id: 1
+  specification_id: 1
+  package_id: 1
+  supplier: MyString
+  stock: 1
+  price: 9.99
+  info: MyText

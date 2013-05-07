@@ -1,0 +1,27 @@
+<% content_for(:nav) { %>
+    <%= render :partial => 'layouts/cside' %>
+<% } %>
+<% content_for(:page_header) { %>
+      <h4>显示元件</h4>
+<% } %>
+<%- model_class = Component -%>
+<dl class="dl-horizontal">
+  <dt><strong>元件名</strong></dt>
+  <dd><%= @component.element.name %></dd>
+  <dt><strong>规格</strong></dt>
+  <dd><%= @component.specification.name %></dd>
+  <dt><strong>封装</strong></dt>
+  <dd><%= @component.package.name %></dd>
+  <dt><strong>供应商</strong></dt>
+  <dd><%= @component.supplier %></dd>
+  <dt><strong>库存</strong></dt>
+  <dd><%= @component.stock %></dd>
+  <dt><strong>价格</strong></dt>
+  <dd><%= @component.price %></dd>
+  <dt><strong>其他信息</strong></dt>
+  <dd><%= @component.info %></dd>
+</dl>
+<div class="form-actions">
+  <%= link_to '返回',components_path, :class => 'btn'  %>
+  <%= link_to '编辑',edit_component_path(@component), :class => 'btn' %>
+</div>

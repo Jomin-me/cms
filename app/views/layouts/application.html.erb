@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
@@ -10,7 +10,20 @@
 <body>
 <%= render 'layouts/header' %>
 <div class="container">
-  <%= yield %>
+  <div class="row">
+    <div class="span2">
+      <%= yield :nav %>
+    </div>
+    <div class="span10">
+      <div class="page-header">
+        <%= yield :page_header %>
+      </div>
+      <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </div>
   <%= render 'layouts/footer' %>
 </div>
 </body>

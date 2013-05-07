@@ -1,0 +1,50 @@
+<%= form_for @component, :html => {:class => 'form-horizontal'} do |f| %>
+    <div class="control-group">
+      <%= f.label :element_id, '元件名', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.select :element_id, options_for_select(['-请选择-']+@element_list+['-输入-']) %>
+        <%= text_field_tag :element_name, '', style: 'display:none' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :specification_id, '规格', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.select :specification_id, options_for_select(['请选择上级']) %>
+        <%= text_field_tag :specification_name, '', style: 'display:none' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :package_id, '封装', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.select :package_id, options_for_select(['请选择上级']) %>
+        <%= text_field_tag :package_name, '', style: 'display:none' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :supplier, '供应商', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :supplier %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :stock, '库存', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :stock, :class => 'number_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :price, '单价', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :price, :class => 'number_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :info, '其他信息', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :info, rows:'5' %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.submit '提交',class:'btn btn-primary' %>
+    </div>
+<% end %>
