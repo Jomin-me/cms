@@ -10,6 +10,7 @@ Dependency
 - Bootstrap
 
 Setup Guide
+===
 
     git clone git@github.com:Jomin-me/cms.git
     cd cms
