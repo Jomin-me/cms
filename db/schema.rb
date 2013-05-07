@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506165835) do
+ActiveRecord::Schema.define(:version => 20130507011541) do
 
   create_table "components", :force => true do |t|
     t.integer  "element_id"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(:version => 20130506165835) do
     t.integer  "specification_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "pcb_boms", :force => true do |t|
+    t.string   "name"
+    t.integer  "comp_id"
+    t.text     "mark"
+    t.integer  "count"
+    t.text     "info"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "specifications", :force => true do |t|

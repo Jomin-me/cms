@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pcb_bom.name %>
+</p>
+
+<p>
+  <b>Comp:</b>
+  <%= @pcb_bom.comp_id %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @pcb_bom.mark %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @pcb_bom.count %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @pcb_bom.info %>
+</p>
+
+
+<%= link_to 'Edit', edit_pcb_bom_path(@pcb_bom) %> |
+<%= link_to 'Back', pcb_boms_path %>

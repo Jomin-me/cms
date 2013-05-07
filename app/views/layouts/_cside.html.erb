@@ -1,4 +1,6 @@
 <ul class="nav nav-list">
   <li class="<%= request.path == '/components/new'? 'active':'' %>"><%= link_to "元件入库", {:controller => 'components', :action => 'new'} %></li>
   <li class="<%= request.path == '/components'? 'active':''%>"><%= link_to "元件库存", {:controller => 'components', :action => 'index'} %></li>
+  <li class="<%= request.path == '/pcb_boms/new'? 'active':''%>"><%= link_to "新增BOMS", {:controller => 'pcb_boms', :action => 'new'} %></li>
+  <li class="<%= request.path == '/pcb_boms'? 'active':''%>"><%= link_to "ALL BOMS", {:controller => 'pcb_boms', :action => 'index'} %></li>
 </ul>

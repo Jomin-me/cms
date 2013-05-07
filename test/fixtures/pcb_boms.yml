@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  comp_id: 1
+  mark: MyText
+  count: 1
+  info: MyText
+
+two:
+  name: MyString
+  comp_id: 1
+  mark: MyText
+  count: 1
+  info: MyText

@@ -1,4 +1,5 @@
 Cms::Application.routes.draw do
+  resources :pcb_boms
   resources :components
 
 
