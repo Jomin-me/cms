@@ -4,10 +4,10 @@ Component Manager System
 Dependency
 ===
 
-    - Ruby 2.0.0+
-    - Rails ~> 3.2.13
-    - Sqlite
-    - Bootstrap
+- Ruby 2.0.0+
+- Rails ~> 3.2.13
+- Sqlite
+- Bootstrap
 
 Setup Guide
 
